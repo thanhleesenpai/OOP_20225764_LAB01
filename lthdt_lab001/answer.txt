@@ -1,0 +1,8 @@
+		-What happens if users choose “Cancel”? 
+
+	Khi chọn nút "Cancel", hệ thống hiển thị "bạn đã chọn No" giống như khi ta ấn "No"
+
+
+		-How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t”.
+
+	Để tùy chỉnh nút, chẳng hạn như chỉ hiển thị "Yes" và "No" hoặc "Tôi đồng ý" và "Tôi không đồng ý", ta có thể sử dụng phương thức JOptionPane.showOptionDialog để kiểm soát tên của các nút thay cho showConfirmDialog
