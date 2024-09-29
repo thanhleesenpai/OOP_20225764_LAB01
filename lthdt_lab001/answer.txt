@@ -5,4 +5,25 @@
 
 		-How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t”.
 
-	Để tùy chỉnh nút, chẳng hạn như chỉ hiển thị "Yes" và "No" hoặc "Tôi đồng ý" và "Tôi không đồng ý", ta có thể sử dụng phương thức JOptionPane.showOptionDialog để kiểm soát tên của các nút thay cho showConfirmDialog
+	Để tùy chỉnh nút, chẳng hạn như chỉ hiển thị "Yes" và "No" hoặc "Tôi đồng ý" và "Tôi không đồng ý", ta có thể sử dụng phương thức JOptionPane.showOptionDialog để kiểm soát tên của các nút thay cho showConfirmDialog như sau:
+
+
+import javax.swing.JOptionPane;
+
+public class ChoosingOption {
+    public static void main(String[] args) {
+        String[] options = {"Yes", "No"};
+        int option = JOptionPane.showOptionDialog(null, 
+                "Do you want to change to the first class ticket?", 
+                "Ticket Option", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                options, 
+                options[0]);
+
+        String message = (option == JOptionPane.YES_OPTION) ? "Bạn đã chọn: Yes" : "Bạn đã chọn: No";
+        JOptionPane.showMessageDialog(null, message);
+        System.exit(0);
+    }
+}
